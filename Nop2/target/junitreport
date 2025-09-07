@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="51.561" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-09-07T13:00:47.936667800Z">
+<testcase classname="Add the products to cart" name="Add the Products to th cart" time="3.388">
+<system-out><![CDATA[
+Given Present in the Nop commerce Website Home Page.........................passed
+When Select the Required Product............................................passed
+Then Perform Add to cart1 operation.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Sorting" name="Sort products by name in alphabetical order" time="4.734">
+<system-out><![CDATA[
+Given the user is on the notebooks1 category page...........................passed
+When the user selects "Name: A to Z" from the sort dropdown.................passed
+Then the products should be listed in ascending alphabetical order..........passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Sorting" name="Sorting products by price low to high" time="3.35">
+<system-out><![CDATA[
+Given the user is on the notebooks category page............................passed
+When the user selects "Price: Low to High" from the sort by dropdown........passed
+Then the products should be sorted by price in ascending order..............passed
+]]></system-out>
+</testcase>
+<testcase classname="NopCommerce Website Check Blog Pos" name="Verify Blog Posts are Displayed" time="4.499">
+<system-out><![CDATA[
+Given Should be in the nopCommerce homepage.................................passed
+When click on the "Blog" link...............................................passed
+Then should see a list of blog posts........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Change Currency Functionality" name="Change currency to Euro" time="3.886">
+<system-out><![CDATA[
+Given the user1 is on the home page.........................................passed
+When the user selects "Euro" from the currency dropdown.....................passed
+Then the prices of all products should be displayed in Euros................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Successful login with valid credentials" time="4.596">
+<system-out><![CDATA[
+Given the user is on the login page.........................................passed
+When the user enters a valid email and password.............................passed
+And clicks the login button.................................................passed
+Then the user should be redirected to the home page.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verify New Products1 Are Showing" name="Verify New Products are Displayed" time="4.315">
+<system-out><![CDATA[
+Given Present on the nopCommerce homepage...................................passed
+When click on the new products..............................................passed
+Then should see a list of new products......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="Search for a product that does not exist" time="4.159">
+<system-out><![CDATA[
+Given the user3 is on the home page.........................................passed
+When the user searches for a product with a non-existent keyword............passed
+Then a "No products were found" message should be displayed.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="Searching for a product with a partial keyword" time="6.324">
+<system-out><![CDATA[
+Given the user is on the home page..........................................passed
+When the user enters the partial keyword "cam" into the search bar..........passed
+And clicks the search button................................................passed
+Then a product with the title "Camera" should be displayed in the search results.passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration" name="Successful user registration" time="4.445">
+<system-out><![CDATA[
+Given the user is on the registration page..................................passed
+When the user fills in all required registration fields.....................passed
+And clicks the register button..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="Searching for a product with a full keyword" time="4.416">
+<system-out><![CDATA[
+Given the user is on the home page..........................................passed
+When the user enters the full keyword "camera" into the search bar..........passed
+And clicks the search button................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add the the Product to the wishlist" name="Put the Product into the Wishlist" time="3.178">
+<system-out><![CDATA[
+When Check the website is in the home page..................................passed
+Given Find the product in Order to add into the wishlist....................passed
+Then Add the product to the wishlist........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
