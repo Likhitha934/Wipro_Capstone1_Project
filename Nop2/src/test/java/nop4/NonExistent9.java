@@ -11,7 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class NonExistent {
+public class NonExistent9 {
 	WebDriver driver;
 	WebDriverWait wait;
 	@Given("the user3 is on the home page")

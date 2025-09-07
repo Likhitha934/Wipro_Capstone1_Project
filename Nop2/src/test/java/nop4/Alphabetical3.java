@@ -18,7 +18,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Alphabetical {
+public class Alphabetical3 {
 	WebDriver driver;
 	WebDriverWait wait;
 	@Given("the user is on the notebooks1 category page")

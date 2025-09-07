@@ -14,7 +14,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class NewProduct {
+public class NewProduct8 {
 	WebDriver driver;
 	WebDriverWait wait;
 	@Given("Present on the nopCommerce homepage")

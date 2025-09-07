@@ -12,7 +12,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Ascending
+public class Ascending4
 {
 	WebDriver driver;
 	WebDriverWait wait;

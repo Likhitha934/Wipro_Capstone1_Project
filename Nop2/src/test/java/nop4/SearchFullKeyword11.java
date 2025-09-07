@@ -11,7 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class SearchFullKeyword
+public class SearchFullKeyword11
 {
 	WebDriver driver;
 	WebDriverWait wait;
