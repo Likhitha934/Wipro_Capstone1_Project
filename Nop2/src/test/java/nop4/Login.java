@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -31,10 +31,10 @@ public class Login
 
 	@When("the user enters a valid email and password")
 	public void the_user_enters_a_valid_email_and_password() {
-		 driver.get("https://demo.nopcommerce.com/login?returnUrl=%2F");
+		 driver.get("https://demo.nopcommerce.com/");
+		driver.findElement(By.linkText("Log in")).click();
 		
-		
-        driver.findElement(By.id("Email")).sendKeys("Likhitha@gmail.com");
+        driver.findElement(By.id("Email")).sendKeys("Likhithagn25@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("Password123");
         
 	}
