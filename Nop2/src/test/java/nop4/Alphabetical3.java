@@ -33,21 +33,9 @@ public class Alphabetical3 {
 
 	@When("the user selects {string} from the sort dropdown")
 	public void the_user_selects_from_the_sort_dropdown(String string) {
-		 driver.get("https://demo.nopcommerce.com/computers");
-         driver.findElement(By.linkText("Notebooks")).click();
-
-         Select sortDropdown = new Select(driver.findElement(By.id("products-orderby")));
-         sortDropdown.selectByVisibleText("Name: A to Z");
-
-         List<WebElement> productTitleElements = driver.findElements(By.xpath("//h2[@class='product-title']/a"));
-         List<String> productTitles = productTitleElements.stream()
-                 .map(WebElement::getText)
-                 .collect(Collectors.toList());
-
-         List<String> sortedTitles = new ArrayList<>(productTitles);
-         Collections.sort(sortedTitles);
-
-       
+		POM pm = new POM(driver);
+        pm.testSortProductsAlphabetically();
+		
       
 		
 	    

@@ -26,15 +26,14 @@ public class Add_to_cart7 {
 
 	@When("Select the Required Product")
 	public void select_the_required_product() {
-		driver.findElement(By.xpath("//a[@href=\"/books\"]"));
-		driver.findElement(By.xpath("//button[@type=\"button\"]"));
-		driver.findElement(By.xpath("//a[@href=\"/cart\"]"));
-		
+		POM pm = new POM(driver);
+        pm.testShopByCategoryAndAddToCart();
 	    
 	}
 
 	@Then("Perform Add to cart1 operation")
 	public void perform_add_to_cart1_operation() {
+		
 	    
 	}
 

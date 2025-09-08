@@ -15,10 +15,10 @@ public class Register1
 {
 	WebDriver driver;
 	WebDriverWait wait;
-	private WebElement element;
+	WebElement element;
 	@Given("the user is on the registration page")
 	public void the_user_is_on_the_registration_page() {
-		driver = new ChromeDriver();
+	    driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		 driver.get("https://demo.nopcommerce.com/");
 		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
@@ -34,27 +34,22 @@ public class Register1
 
 	@When("the user fills in all required registration fields")
 	public void the_user_fills_in_all_required_registration_fields() {
-driver.get("https://demo.nopcommerce.com/register");
-
+       
         
 
         // Find and fill registration fields
-        driver.findElement(By.id("gender-female")).click();
-        driver.findElement(By.id("FirstName")).sendKeys("Likhitha");
-        driver.findElement(By.id("LastName")).sendKeys("GN");
-        driver.findElement(By.id("Email")).sendKeys("Likhithagn25@gmail.com");
-        driver.findElement(By.id("Password")).sendKeys("Password123");
-        driver.findElement(By.id("ConfirmPassword")).sendKeys("Password123");
+        POM pm = new POM(driver);
+        pm.testSuccessfulRegistration();
         
 
-        // Click the register button
+        
         
 		
 	}
 
 	@When("clicks the register button")
 	public void clicks_the_register_button() {
-		driver.findElement(By.id("register-button")).click();
+		
 		
         
 		

@@ -30,10 +30,8 @@ public class Ascending4
 
 	@When("the user selects {string} from the sort by dropdown")
 	public void the_user_selects_from_the_sort_by_dropdown(String string) {
-		 driver.get("https://demo.nopcommerce.com/notebooks");
-         Select sortDropdown = new Select(driver.findElement(By.id("products-orderby")));
-         sortDropdown.selectByVisibleText("Price: Low to High");
-	    
+		 POM pm = new POM(driver);
+		pm.testSortProductsByPriceAscending();
 	}
 
 	@Then("the products should be sorted by price in ascending order")

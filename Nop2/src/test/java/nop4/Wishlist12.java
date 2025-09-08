@@ -25,11 +25,8 @@ public class Wishlist12 {
 
 	@Given("Find the product in Order to add into the wishlist")
 	public void find_the_product_in_order_to_add_into_the_wishlist() {
-		driver.findElement(By.xpath("//a[@href=\"/books\"]"));
-	    driver.findElement(By.xpath("//button[@class=\"button-2 add-to-wishlist-button\"]"));
-	    driver.findElement(By.xpath(" //span[@class=\"wishlist-label\"]"));
-	   
-	 
+		 POM pm = new POM(driver);
+	     pm.testWishlist();
 		
 	}
 

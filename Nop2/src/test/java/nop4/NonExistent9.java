@@ -25,10 +25,9 @@ public class NonExistent9 {
 
 	@When("the user searches for a product with a non-existent keyword")
 	public void the_user_searches_for_a_product_with_a_non_existent_keyword() {
-		driver.get("https://demo.nopcommerce.com/");
-        driver.findElement(By.id("small-searchterms")).sendKeys("nonexistentproduct123");
-        driver.findElement(By.cssSelector("button.search-box-button")).click();
-	    
+		POM pm = new POM(driver);
+        pm.testSearchForNonExistentProduct();
+		
 	}
 
 	@Then("a {string} message should be displayed")

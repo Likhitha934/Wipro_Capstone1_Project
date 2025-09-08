@@ -28,11 +28,9 @@ public class NewProduct8 {
 
 	@When("click on the new products")
 	public void click_on_the_new_products() {
-		driver.get("https://demo.nopcommerce.com/");
-        driver.findElement(By.linkText("New products")).click();
-
-        List<WebElement> newProductElements = driver.findElements(By.cssSelector("div.product-grid div.product-item"));
-       
+		POM pm = new POM(driver);
+		pm.testCheckNewProducts();
+		
 	}
 
 	@Then("should see a list of new products")

@@ -26,8 +26,9 @@ public class BlogPosts5 {
 
 	@When("click on the {string} link")
 	public void click_on_the_link(String string) {
-		driver.get("https://demo.nopcommerce.com/");
-        driver.findElement(By.linkText("Blog")).click();
+		POM pm = new POM(driver);
+		pm.testCheckBlogPosts();
+		
 
 	    
 	}

@@ -33,10 +33,9 @@ public class CurrencyToEuro6 {
 
 	@When("the user selects {string} from the currency dropdown")
 	public void the_user_selects_from_the_currency_dropdown(String string) {
-		driver.get("https://demo.nopcommerce.com/");
-        Select currencyDropdown = new Select(driver.findElement(By.id("customerCurrency")));
-        currencyDropdown.selectByVisibleText("Euro");
-        
+		POM pm = new POM(driver);
+		pm.testChangeCurrencyToEuro();
+		
        
         
         

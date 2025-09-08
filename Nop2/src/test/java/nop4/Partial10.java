@@ -29,17 +29,17 @@ public class Partial10
 		driver.get("https://demo.nopcommerce.com/register");
 		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 	    
-		driver.get("https://demo.nopcommerce.com/");
-        driver.findElement(By.id("small-searchterms")).sendKeys("cam");
-        driver.findElement(By.cssSelector(".search-box-button")).click();
+		
         
 	    
 	}
 
 	@Then("a product with the title {string} should be displayed in the search results")
 	public void a_product_with_the_title_should_be_displayed_in_the_search_results(String string) {
-	    
+		POM pm = new POM(driver);
+        pm.testSearchByPartialKeyword();
 	}
+		
 
 
 

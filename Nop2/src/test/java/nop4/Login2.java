@@ -32,17 +32,14 @@ public class Login2
 	@When("the user enters a valid email and password")
 	public void the_user_enters_a_valid_email_and_password() {
 		 driver.get("https://demo.nopcommerce.com/");
-		driver.findElement(By.linkText("Log in")).click();
 		
-        driver.findElement(By.id("Email")).sendKeys("Likhithagn25@gmail.com");
-        driver.findElement(By.id("Password")).sendKeys("Password123");
-        
 	}
 
 	@And("clicks the login button")
 	public void clicks_the_login_button() {
-		driver.findElement(By.xpath("//button[@class=\"button-1 login-button\"]")).click();
-	   
+		POM pm = new POM(driver);
+		pm.testValidLogin();
+		
 	}
 
 	@Then("the user should be redirected to the home page")
